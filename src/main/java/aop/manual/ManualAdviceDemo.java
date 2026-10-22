@@ -1,4 +1,4 @@
-package aop;
+package aop.manual;
 
 import org.springframework.aop.framework.ProxyFactory;
 
@@ -8,8 +8,8 @@ public class ManualAdviceDemo {
 
         ProxyFactory pf = new ProxyFactory();
         pf.addAdvice(new SimpleBeforeAdvice());
-        pf.addAdvice((new SimpleAroundAdvice()));
-        pf.addAdvice((new SimpleAfterAdvice()));
+        pf.addAdvice(new SimpleAroundAdvice());
+        pf.addAdvice(new SimpleAfterAdvice());
         pf.setTarget(concert);
 
         Performance proxy = (Performance) pf.getProxy();

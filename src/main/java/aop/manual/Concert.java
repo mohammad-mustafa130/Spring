@@ -1,10 +1,10 @@
-package aop;
+package aop.manual;
 
 import org.slf4j.*;
 import static java.time.Duration.ofMillis;
 
 public class Concert implements Performance {
-    private static Logger logger = LoggerFactory.getLogger(Concert.class);
+    private static final Logger logger = LoggerFactory.getLogger(Concert.class);
 
     @Override
     public void execute() {
