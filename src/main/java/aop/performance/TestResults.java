@@ -1,6 +1,7 @@
 package aop.performance;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class TestResults {
     public long advisedMethodTime;
@@ -11,12 +12,12 @@ public class TestResults {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("advised", advisedMethodTime)
-                .append("unadvised", unadvisedMethodTime)
-                .append("equals", equalsTime)
-                .append("hashCode", hashCodeTime)
-                .append("getProxyTargetClass", proxyTargetTime)
-                .toString();
+        return "TestResults " + new ToStringBuilder(this, ToStringStyle.NO_CLASS_NAME_STYLE)
+                        .append("advised", advisedMethodTime)
+                        .append("unadvised", unadvisedMethodTime)
+                        .append("equals", equalsTime)
+                        .append("hashCode", hashCodeTime)
+                        .append("getProxyTargetClass", proxyTargetTime)
+                        .toString();
     }
 }

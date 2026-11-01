@@ -8,7 +8,7 @@ public class GrammyGuitarist implements Singer {
 
     @Override
     public void sing() {
-        logger.info("sing: Gravity is working against me\n" + "And gravity wants me bring me down");
+        logger.info("sing: Gravity is working against me");
     }
     public void sing(Guitar guitar) {
         logger.info("play: " + guitar.play());
