@@ -1,4 +1,4 @@
-package six;
+package six.daodemo;
 
 import java.sql.*;
 
